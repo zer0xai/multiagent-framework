@@ -79,7 +79,7 @@ CMD ["python", "src/{model_name}-model.py"]
 
 
 def update_docker_compose(service_name: str, type_: str = "agent"):
-    docker_compose_path = "docker-compose.yml"
+    docker_compose_path = "docker-compose.yaml"
     service_slug = service_name.replace("_", "-")
 
     try:
