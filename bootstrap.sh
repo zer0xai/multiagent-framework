@@ -98,6 +98,15 @@ create-agent video-editor
 - \`logs/\`: Registro de atualizações
 EOF
 
+# Corrigir automaticamente scripts/core/create.py para importar 'translate'
+CREATE_CORE_PATH="scripts/core/create.py"
+if [ -f "$CREATE_CORE_PATH" ]; then
+  if ! grep -q "from scripts.core.translate import translate" "$CREATE_CORE_PATH"; then
+    echo "Corrigindo importação de 'translate' em $CREATE_CORE_PATH..."
+    sed -i '1s/^/from scripts.core.translate import translate\n/' "$CREATE_CORE_PATH"
+  fi
+fi
+
 # Criar .gitignore padrão
 cat <<EOF > .gitignore
 __pycache__/

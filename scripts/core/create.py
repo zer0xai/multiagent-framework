@@ -1,6 +1,7 @@
 import os
 import yaml
 from datetime import datetime
+from scripts.core.translate import translate
 
 def create_agent(name="example-agent", dry_run=False):
     if dry_run:
