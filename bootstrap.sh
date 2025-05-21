@@ -13,7 +13,7 @@ mkdir -p locales logs
 touch scripts/__init__.py
 touch scripts/core/__init__.py
 
-# Criar Dockerfile.base
+# Criar Dockerfile.base com tail para manter container ativo
 cat <<EOF > Dockerfile.base
 FROM python:3.11-slim
 

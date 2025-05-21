@@ -3,6 +3,7 @@ import yaml
 from datetime import datetime
 from scripts.core.translate import translate
 
+
 def create_agent(name="example-agent", dry_run=False):
     if dry_run:
         print(f"🆕 Criaria o agente: {name}")
@@ -78,34 +79,39 @@ CMD ["python", "src/{model_name}-model.py"]
     return model_name
 
 
-def update_docker_compose(service_name: str, type_: str = "agent"):
-    docker_compose_path = "docker-compose.yaml"
-    service_slug = service_name.replace("_", "-")
+def update_docker_compose(name, type_="agent"):
+    compose_file = "docker-compose.yaml"
 
-    try:
-        with open(docker_compose_path, "r") as f:
-            compose = yaml.safe_load(f)
-    except FileNotFoundError:
-        compose = {"version": "3", "services": {}}
+    if os.path.exists(compose_file):
+        with open(compose_file, "r") as f:
+            compose_data = yaml.safe_load(f)
+    else:
+        compose_data = {"version": "3", "services": {}}
 
-    if "services" not in compose:
-        compose["services"] = {}
+    services = compose_data.get("services", {})
+    service_name = f"{type_}-{name}".replace("_", "-")
 
-    base_dir = (
-        f"./agents/{service_name}" if type_ == "agent" else f"./models/{service_name}"
-    )
-    main_script = f"{service_name}-{type_}.py"
+    if service_name in services:
+        print(f"Serviço '{service_name}' já existe no docker-compose.yaml")
+        return
 
-    compose["services"][service_slug] = {
-        "build": {"context": base_dir},
-        "container_name": service_slug,
-        "volumes": [f"{base_dir}:/app"],
-        "working_dir": "/app",
-        "command": f"python src/{main_script}",
+    services[service_name] = {
+        "build": {
+            "context": f"./src/{type_}s/{name}",
+            "dockerfile": "Dockerfile"
+        },
+        "volumes": [
+            f"./src/{type_}s/{name}:/app"
+        ],
+        "tty": True
     }
 
-    with open(docker_compose_path, "w") as f:
-        yaml.dump(compose, f, sort_keys=False)
+    compose_data["services"] = services
+
+    with open(compose_file, "w") as f:
+        yaml.dump(compose_data, f, sort_keys=False)
+
+    print(f"✅ Serviço '{service_name}' adicionado ao docker-compose.yaml")
 
 
 def update_main_menu(agent_name: str):
@@ -190,10 +196,24 @@ def write_log(message: str):
     with open(log_path, "a") as log_file:
         log_file.write(f"[{timestamp}] {message}\n")
 
+def log_entity_creation(entity_type: str, name: str):
+    log_dir = "logs"
+    os.makedirs(log_dir, exist_ok=True)
+    log_path = os.path.join(log_dir, "creation.log")
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    with open(log_path, "a") as log_file:
+        log_file.write(f"[{timestamp}] ✅ {entity_type} criado: {name}\n")
+
 
 def log_agent_creation(agent_name: str):
-    write_log(f"✅ Agente criado: {agent_name}")
+    log_entity_creation("Agente", agent_name)
 
 
 def log_model_creation(model_name: str):
-    write_log(f"✅ Modelo criado: {model_name}")
+    log_entity_creation("Modelo", model_name)
+
+
+def log_interface_creation(interface_name: str):
+    log_entity_creation("Interface", interface_name)
+
