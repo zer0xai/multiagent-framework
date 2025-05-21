@@ -137,26 +137,30 @@ EOF
 
 # Função para adicionar alias se não existir
 add_alias_if_not_exists() {
-  local alias_line="$1"
-  local rc_file="$2"
-  if ! grep -Fxq "$alias_line" "$rc_file" 2>/dev/null; then
-    echo "$alias_line" >> "$rc_file"
-    echo "Adicionado alias em $rc_file: $alias_line"
+  local alias_line="\$1"
+  local rc_file="\$2"
+  if ! grep -Fxq "\$alias_line" "\$rc_file" 2>/dev/null; then
+    echo "\$alias_line" >> "\$rc_file"
+    echo "Adicionado alias em \$rc_file: \$alias_line"
   else
-    echo "Alias já existe em $rc_file: $alias_line"
+    echo "Alias já existe em \$rc_file: \$alias_line"
   fi
 }
 
+# Definir aliases
 ALIASES=(
   "alias start-env='docker compose up --build -d'"
-  "alias update-system='docker compose exec python-base python scripts/update/update-system.py'"
-  "alias create-agent='docker compose exec python-base python scripts/create/create-agent.py'"
+  "alias update-system='docker compose exec python-base python scripts/update/update_system.py'"
+  "alias create-agent='docker compose exec python-base python scripts/create/create_agent.py'"
+  "alias create-model='docker compose exec python-base python scripts/create/create_model.py'"
+  "alias create-interface='docker compose exec python-base python scripts/create/create_interface.py'"
 )
 
+# Adicionar aliases aos arquivos de configuração
 for rc in ~/.bashrc ~/.zshrc; do
-  [ -f "$rc" ] || continue
-  for alias_line in "${ALIASES[@]}"; do
-    add_alias_if_not_exists "$alias_line" "$rc"
+  [ -f "\$rc" ] || continue
+  for alias_line in "\${ALIASES[@]}"; do
+    add_alias_if_not_exists "\$alias_line" "\$rc"
   done
 done
 
