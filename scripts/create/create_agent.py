@@ -1,5 +1,4 @@
 from scripts.core.create import (
-    create_agent_structure,
     update_docker_compose,
     update_main_menu,
     create_alias,
