@@ -164,6 +164,7 @@ ALIASES=(
   "alias create-model='docker compose exec python-base python scripts/create/create_model.py'"
   "alias create-interface='docker compose exec python-base python scripts/create/create_interface.py'"
   "alias format-code='docker compose exec python-base black .'"
+  "alias lint-code='docker compose exec python-base ruff check . --fix'"
 )
 
 # Adicionar aliases ao ~/.bashrc e ~/.zshrc
