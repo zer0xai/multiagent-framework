@@ -3,6 +3,7 @@
 import argparse
 import sys
 import os
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 import subprocess
@@ -134,6 +135,7 @@ def validate_python():
 
 def validate_docker():
     import shutil
+
     if shutil.which("docker-compose") is None:
         print("⚠️  docker-compose não está disponível neste ambiente. Pulei validação.")
         return

@@ -32,7 +32,9 @@ def create_agent():
 
     # Cria Dockerfile
     with open(os.path.join(base_path, "Dockerfile"), "w") as f:
-        f.write(f"FROM python:3.11-slim\nWORKDIR /app\nCOPY . .\nCMD [\"python\", \"{agent_name.replace('-', '_')}_agent.py\"]\n")
+        f.write(
+            f"FROM python:3.11-slim\nWORKDIR /app\nCOPY . .\nCMD [\"python\", \"{agent_name.replace('-', '_')}_agent.py\"]\n"
+        )
 
     # Cria requirements.txt
     with open(os.path.join(base_path, "requirements.txt"), "w") as f:
@@ -41,7 +43,9 @@ def create_agent():
     # Cria o script principal do agente
     script_name = agent_name.replace("-", "_") + "_agent.py"
     with open(os.path.join(base_path, script_name), "w") as f:
-        f.write(f'def main():\n    print("Running {agent_name} agent...")\n\n\nif __name__ == "__main__":\n    main()\n')
+        f.write(
+            f'def main():\n    print("Running {agent_name} agent...")\n\n\nif __name__ == "__main__":\n    main()\n'
+        )
 
     # Continuação das etapas padrão
     update_docker_compose(agent_name, type_="agent")

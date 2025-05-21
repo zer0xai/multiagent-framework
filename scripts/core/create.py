@@ -18,6 +18,7 @@ def create_agent(name="example-agent", dry_run=False):
     update_readme_prompt_for_ia("agent", name)
     log_agent_creation(name)
 
+
 def create_agent_structure(agent_name: str):
     agent_name = agent_name.lower().replace(" ", "-")  # normalize nome
     agent_dir = f"src/agents/{agent_name}"
@@ -96,14 +97,9 @@ def update_docker_compose(name, type_="agent"):
         return
 
     services[service_name] = {
-        "build": {
-            "context": f"./src/{type_}s/{name}",
-            "dockerfile": "Dockerfile"
-        },
-        "volumes": [
-            f"./src/{type_}s/{name}:/app"
-        ],
-        "tty": True
+        "build": {"context": f"./src/{type_}s/{name}", "dockerfile": "Dockerfile"},
+        "volumes": [f"./src/{type_}s/{name}:/app"],
+        "tty": True,
     }
 
     compose_data["services"] = services
@@ -196,6 +192,7 @@ def write_log(message: str):
     with open(log_path, "a") as log_file:
         log_file.write(f"[{timestamp}] {message}\n")
 
+
 def log_entity_creation(entity_type: str, name: str):
     log_dir = "logs"
     os.makedirs(log_dir, exist_ok=True)
@@ -216,4 +213,3 @@ def log_model_creation(model_name: str):
 
 def log_interface_creation(interface_name: str):
     log_entity_creation("Interface", interface_name)
-

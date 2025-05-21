@@ -6,6 +6,7 @@ _translation_cache = {}
 # Caminho absoluto da pasta raiz do projeto dentro do container (onde está a pasta locales)
 BASE_DIR = "/app"  # Ajuste aqui conforme o root do seu projeto no container
 
+
 def translate(key: str, **kwargs) -> str:
     lang = os.environ.get("LANGUAGE", "en")
 
