@@ -1,0 +1,125 @@
+2025-05-16 04:39:21,437 - INFO - Updating README for humans...
+2025-05-16 04:39:21,437 - INFO - Updating README for AI prompt...
+2025-05-16 04:39:21,437 - INFO - Updating agents...
+2025-05-16 04:39:21,437 - INFO - Updating models...
+2025-05-16 04:39:21,437 - INFO - Validating YAML files...
+2025-05-16 04:39:21,487 - INFO - Validating Python files with black...
+2025-05-16 04:39:21,488 - INFO - Validating Docker Compose config...
+2025-05-16 04:39:23,387 - INFO - Running tests with pytest...
+2025-05-21 02:04:54,898 - INFO - Diretório já existente: logs
+2025-05-21 02:04:54,898 - INFO - Diretório já existente: src/agents
+2025-05-21 02:04:54,898 - INFO - Verificando agentes existentes...
+2025-05-21 02:04:54,898 - INFO - Agente 'example-agent' ausente, criando...
+2025-05-21 02:26:56,465 - INFO - Modo dry-run ativado - simulando alterações.
+2025-05-21 02:27:05,957 - INFO - Modo dry-run ativado - simulando alterações.
+2025-05-21 02:27:12,664 - INFO - Diretório já existente: logs
+2025-05-21 02:27:12,664 - INFO - Diretório já existente: src/agents
+2025-05-21 02:27:12,664 - INFO - Verificando agentes existentes...
+2025-05-21 02:27:12,664 - INFO - Agente 'example-agent' ausente, criando...
+2025-05-21 02:27:22,448 - INFO - Diretório já existente: logs
+2025-05-21 02:27:22,448 - INFO - Diretório já existente: src/agents
+2025-05-21 02:27:22,448 - INFO - Verificando agentes existentes...
+2025-05-21 02:27:22,448 - INFO - Agente 'example-agent' ausente, criando...
+2025-05-21 02:27:32,563 - INFO - Modo dry-run ativado - simulando alterações.
+2025-05-21 02:27:35,216 - INFO - Diretório já existente: logs
+2025-05-21 02:27:35,216 - INFO - Diretório já existente: src/agents
+2025-05-21 02:27:35,216 - INFO - Verificando agentes existentes...
+2025-05-21 02:27:35,216 - INFO - Agente 'example-agent' ausente, criando...
+2025-05-21 02:30:08,788 - INFO - Diretório já existente: logs
+2025-05-21 02:30:08,788 - INFO - Diretório já existente: src/agents
+2025-05-21 02:30:08,788 - INFO - Verificando agentes existentes...
+2025-05-21 02:30:08,788 - INFO - Agente 'example-agent' ausente, criando...
+2025-05-21 02:31:22,620 - INFO - Diretório já existente: logs
+2025-05-21 02:31:22,620 - INFO - Diretório já existente: src/agents
+2025-05-21 02:31:22,620 - INFO - Verificando agentes existentes...
+2025-05-21 02:31:22,620 - INFO - Agente 'example-agent' ausente, criando...
+2025-05-21 02:31:22,620 - INFO - README.md atualizado com marcador.
+2025-05-21 02:31:22,620 - INFO - Validação YAML bem-sucedida.
+2025-05-21 02:31:23,203 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 02:35:43,300 - INFO - Diretório já existente: logs
+2025-05-21 02:35:43,300 - INFO - Diretório já existente: src/agents
+2025-05-21 02:35:43,300 - INFO - Verificando agentes existentes...
+2025-05-21 02:35:43,300 - INFO - Agente 'example-agent' já existe.
+2025-05-21 02:35:43,300 - INFO - README.md já contém o marcador.
+2025-05-21 02:35:43,300 - INFO - Validação YAML bem-sucedida.
+2025-05-21 02:35:43,579 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 02:46:20,986 - INFO - Diretório já existente: logs
+2025-05-21 02:46:20,987 - INFO - Diretório já existente: src/agents
+2025-05-21 02:46:20,987 - INFO - Verificando agentes existentes...
+2025-05-21 02:46:20,987 - INFO - Agente 'example-agent' já existe.
+2025-05-21 02:46:20,987 - INFO - README.md atualizado com marcador.
+2025-05-21 02:46:20,987 - INFO - Validação YAML bem-sucedida.
+2025-05-21 02:46:21,183 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 02:46:21,681 - ERROR - Falha na execução dos testes.
+2025-05-21 02:52:25,272 - INFO - Diretório já existente: logs
+2025-05-21 02:52:25,272 - INFO - Diretório já existente: src/agents
+2025-05-21 02:52:25,272 - INFO - Verificando agentes existentes...
+2025-05-21 02:52:25,273 - INFO - Agente 'example-agent' já existe.
+2025-05-21 02:52:25,273 - INFO - README.md já contém o marcador.
+2025-05-21 02:52:25,273 - INFO - Validação YAML bem-sucedida.
+2025-05-21 02:52:25,943 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 02:52:26,361 - ERROR - Falha na execução dos testes.
+2025-05-21 02:55:28,011 - INFO - Diretório já existente: logs
+2025-05-21 02:55:28,011 - INFO - Diretório já existente: src/agents
+2025-05-21 02:55:28,011 - INFO - Verificando agentes existentes...
+2025-05-21 02:55:28,011 - INFO - Agente 'example-agent' já existe.
+2025-05-21 02:55:28,011 - INFO - README.md já contém o marcador.
+2025-05-21 02:55:28,011 - INFO - Validação YAML bem-sucedida.
+2025-05-21 02:55:28,225 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 02:55:28,495 - ERROR - Falha na execução dos testes.
+2025-05-21 03:07:39,830 - INFO - Diretório já existente: logs
+2025-05-21 03:07:39,830 - INFO - Diretório já existente: src/agents
+2025-05-21 03:07:39,830 - INFO - Verificando agentes existentes...
+2025-05-21 03:07:39,830 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:07:39,830 - INFO - README.md já contém o marcador.
+2025-05-21 03:07:39,830 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:07:40,063 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:07:40,285 - ERROR - Falha na execução dos testes.
+2025-05-21 03:07:44,216 - INFO - Diretório já existente: logs
+2025-05-21 03:07:44,217 - INFO - Diretório já existente: src/agents
+2025-05-21 03:07:44,217 - INFO - Verificando agentes existentes...
+2025-05-21 03:07:44,217 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:07:44,217 - INFO - README.md já contém o marcador.
+2025-05-21 03:07:44,217 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:07:44,444 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:07:44,673 - ERROR - Falha na execução dos testes.
+2025-05-21 03:14:05,161 - INFO - Diretório já existente: logs
+2025-05-21 03:14:05,161 - INFO - Diretório já existente: src/agents
+2025-05-21 03:14:05,161 - INFO - Verificando agentes existentes...
+2025-05-21 03:14:05,161 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:14:05,161 - INFO - README.md já contém o marcador.
+2025-05-21 03:14:05,161 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:14:05,389 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:14:05,574 - ERROR - Falha na execução dos testes.
+2025-05-21 03:26:53,400 - INFO - Diretório já existente: logs
+2025-05-21 03:26:53,400 - INFO - Diretório já existente: src/agents
+2025-05-21 03:26:53,400 - INFO - Verificando agentes existentes...
+2025-05-21 03:26:53,400 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:26:53,400 - INFO - README.md já contém o marcador.
+2025-05-21 03:26:53,400 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:26:54,249 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:26:54,635 - ERROR - Falha na execução dos testes.
+2025-05-21 03:27:41,525 - INFO - Diretório já existente: logs
+2025-05-21 03:27:41,525 - INFO - Diretório já existente: src/agents
+2025-05-21 03:27:41,525 - INFO - Verificando agentes existentes...
+2025-05-21 03:27:41,525 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:27:41,525 - INFO - README.md já contém o marcador.
+2025-05-21 03:27:41,525 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:27:41,766 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:27:41,946 - ERROR - Falha na execução dos testes.
+2025-05-21 03:32:09,330 - INFO - Diretório já existente: logs
+2025-05-21 03:32:09,330 - INFO - Diretório já existente: src/agents
+2025-05-21 03:32:09,330 - INFO - Verificando agentes existentes...
+2025-05-21 03:32:09,330 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:32:09,330 - INFO - README.md já contém o marcador.
+2025-05-21 03:32:09,330 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:32:09,566 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:32:09,754 - ERROR - Falha na execução dos testes.
+2025-05-21 03:35:12,575 - INFO - Diretório já existente: logs
+2025-05-21 03:35:12,576 - INFO - Diretório já existente: src/agents
+2025-05-21 03:35:12,576 - INFO - Verificando agentes existentes...
+2025-05-21 03:35:12,576 - INFO - Agente 'example-agent' já existe.
+2025-05-21 03:35:12,576 - INFO - README.md já contém o marcador.
+2025-05-21 03:35:12,576 - INFO - Validação YAML bem-sucedida.
+2025-05-21 03:35:12,804 - ERROR - Erros de formatação ou lint encontrados.
+2025-05-21 03:35:12,995 - ERROR - Falha na execução dos testes.

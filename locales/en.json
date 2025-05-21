@@ -1,0 +1,13 @@
+{
+    "create_agent.title": "=== Agent Creator ===",
+    "create_agent.prompt_name": "Enter agent name: ",
+    "create_agent.final_name": "📛 Final agent name: {agent_name}",
+    "create_agent.success": "✅ Agent '{agent_name}' created and integrated successfully.",
+    "agent_created": "Agent '{agent_name}' created and integrated successfully.",
+    "create_model.title": "=== Model Creator ===",
+    "create_model.prompt_name": "Enter model name: ",
+    "create_model.success": "✅ Model '{model_name}' created and integrated successfully.",
+    "error.user_cancelled": "❌ Operation cancelled by user.",
+    "error.creation_failed": "❌ Error creating model: {error}",
+    "error.invalid_name": "❌ Invalid name. Try again."
+}

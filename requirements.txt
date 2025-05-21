@@ -1,0 +1,6 @@
+# Dependências padrão do ambiente base
+pytest
+pyyaml
+docker
+black
+ruff
