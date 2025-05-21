@@ -7,10 +7,8 @@ from scripts.core.create import (
     update_readme_prompt_for_ia,
     log_agent_creation,
 )
-
-from scripts.core.translate import (
-    translate,
-)
+from scripts.core.translate import translate
+import os
 
 
 def create_agent():
@@ -29,7 +27,24 @@ def create_agent():
 
     print(translate("create_agent.final_name", agent_name=agent_name))
 
-    create_agent_structure(agent_name)
+    # Corrigido: evita criação de src/ interna
+    base_path = f"src/agents/{agent_name}"
+    os.makedirs(base_path, exist_ok=True)
+
+    # Cria Dockerfile
+    with open(os.path.join(base_path, "Dockerfile"), "w") as f:
+        f.write(f"FROM python:3.11-slim\nWORKDIR /app\nCOPY . .\nCMD [\"python\", \"{agent_name.replace('-', '_')}_agent.py\"]\n")
+
+    # Cria requirements.txt
+    with open(os.path.join(base_path, "requirements.txt"), "w") as f:
+        f.write("# Add specific dependencies for this agent\n")
+
+    # Cria o script principal do agente
+    script_name = agent_name.replace("-", "_") + "_agent.py"
+    with open(os.path.join(base_path, script_name), "w") as f:
+        f.write(f'def main():\n    print("Running {agent_name} agent...")\n\n\nif __name__ == "__main__":\n    main()\n')
+
+    # Continuação das etapas padrão
     update_docker_compose(agent_name, type_="agent")
     update_main_menu(agent_name)
     create_alias(agent_name)
